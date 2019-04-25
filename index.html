@@ -26,11 +26,6 @@
       var text = document.getElementById('text')
       var list = document.getElementById('list')
 
-      if (button)
-        button.addEventListener('click', function(e) {
-          e.preventDefault()
-        })
-
       var appendMessage = function appendMessage(msg) {
         if (list) {
           var li = document.createElement('li')
@@ -56,6 +51,7 @@
 
         if (button)
           button.addEventListener('click', function(e) {
+            e.preventDefault()
             if (text) {
               var content = text.value
               if (content && content.trim().length > 0) {
