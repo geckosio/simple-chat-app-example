@@ -2,6 +2,8 @@ const geckos = require('@geckos.io/server').default
 const { iceServers } = require('@geckos.io/server')
 
 const io = geckos({
+  ordered: true,
+  maxRetransmits: 10,
   iceServers: process.env.NODE_ENV === 'production' ? iceServers : []
 })
 
