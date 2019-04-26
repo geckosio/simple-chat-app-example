@@ -10,7 +10,7 @@
   "author": "Yannick Deubel (https://github.com/yandeu)",
   "license": "MIT",
   "dependencies": {
-    "@geckos.io/server": "0.0.2"
+    "@geckos.io/server": "0.0.3"
   },
   "devDependencies": {
     "live-server": "^1.2.1",
