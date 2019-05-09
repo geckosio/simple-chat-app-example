@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Chat App with geckos.io</title>
-    <script src="./js/geckos.io-client.0.0.3.min.js"></script>
+    <script src="./js/geckos.io-client.1.1.1.min.js"></script>
   </head>
   <body>
     <h1>Simple Chat App with geckos.io</h1>
@@ -20,11 +20,15 @@
     <script>
       'use strict'
 
-      var channel = geckos()
+      var channel = geckos({})
 
       var button = document.getElementById('button')
       var text = document.getElementById('text')
       var list = document.getElementById('list')
+
+      button.addEventListener('click', function(e) {
+        e.preventDefault()
+      })
 
       var appendMessage = function appendMessage(msg) {
         if (list) {
@@ -51,7 +55,6 @@
 
         if (button)
           button.addEventListener('click', function(e) {
-            e.preventDefault()
             if (text) {
               var content = text.value
               if (content && content.trim().length > 0) {
