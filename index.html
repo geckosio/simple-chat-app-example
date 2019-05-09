@@ -15,6 +15,11 @@
       <input type="submit" value="submit" id="button" />
     </form>
 
+    <p id="message">
+      Please wait while connecting....<br />
+      <small>Should not take longer than 10 seconds</small>
+    </p>
+
     <ul id="list"></ul>
 
     <script>
@@ -25,6 +30,7 @@
       var button = document.getElementById('button')
       var text = document.getElementById('text')
       var list = document.getElementById('list')
+      var message = document.getElementById('message')
 
       button.addEventListener('click', function(e) {
         e.preventDefault()
@@ -41,10 +47,15 @@
       channel.onConnect(function(error) {
         if (error) {
           console.error(error.message)
+          message.innerHTML = 'Sorry something went wrong :/'
           appendMessage(error.message)
           return
         } else {
-          console.log('You are connected')
+          message.innerHTML = "You're connected :)"
+          console.log("You're connected!")
+          setTimeout(function() {
+            message.remove()
+          }, 2500)
         }
 
         channel.emit('chat message', "Hello everyone, I'm " + channel.id)
