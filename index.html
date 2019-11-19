@@ -27,7 +27,8 @@
   <script>
     'use strict'
 
-    var channel = geckos({})
+    // pass the port and url of the server
+    var channel = geckos({ port: 3000, url: 'http://localhost' })
 
     var button = document.getElementById('button')
     var text = document.getElementById('text')

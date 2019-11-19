@@ -9,7 +9,7 @@
     "serve:prod": "npm-run-all --parallel production live-server",
     "production": "NODE_ENV=production nodemon server.js",
     "development": "nodemon server.js",
-    "live-server": "live-server"
+    "live-server": "live-server --port=8080"
   },
   "author": "Yannick Deubel (https://github.com/yandeu)",
   "license": "MIT",
