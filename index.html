@@ -9,19 +9,31 @@
   </head>
 
   <body>
-    <h1>Simple Chat App with geckos.io</h1>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #root {
+        max-width: 550px;
+        margin: 0 auto;
+      }
+    </style>
 
-    <form>
-      <input type="text" name="text" id="text" value="" />
-      <input type="submit" value="submit" id="button" />
-    </form>
+    <div id="root">
+      <h1>Simple Chat App with geckos.io</h1>
 
-    <p id="message">
-      Please wait while connecting....<br />
-      <small>Should not take longer than 10 seconds</small>
-    </p>
+      <form>
+        <input type="text" name="text" id="text" value="" />
+        <input type="submit" value="submit" id="button" />
+      </form>
 
-    <ul id="list"></ul>
+      <p id="message">
+        Please wait while connecting....<br />
+        <small>Should not take longer than 10 seconds</small>
+      </p>
+
+      <ul id="list"></ul>
+    </div>
 
     <script>
       'use strict'
