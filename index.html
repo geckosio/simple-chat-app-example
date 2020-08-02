@@ -1,88 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Chat App with geckos.io</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chat App with geckos.io</title>
     <script src="./js/geckos.io-client.1.5.0.min.js"></script>
-</head>
+  </head>
 
-<body>
-  <h1>Simple Chat App with geckos.io</h1>
+  <body>
+    <h1>Simple Chat App with geckos.io</h1>
 
-  <form>
-    <input type="text" name="text" id="text" value="" />
-    <input type="submit" value="submit" id="button" />
-  </form>
+    <form>
+      <input type="text" name="text" id="text" value="" />
+      <input type="submit" value="submit" id="button" />
+    </form>
 
-  <p id="message">
-    Please wait while connecting....<br />
-    <small>Should not take longer than 10 seconds</small>
-  </p>
+    <p id="message">
+      Please wait while connecting....<br />
+      <small>Should not take longer than 10 seconds</small>
+    </p>
 
-  <ul id="list"></ul>
+    <ul id="list"></ul>
 
-  <script>
-    'use strict'
+    <script>
+      'use strict'
 
-    // pass the port and url of the server
-    var channel = geckos({ port: 3000, url: 'http://localhost' })
+      // pass the port and url of the server
+      var channel = geckos({ port: 3000, url: 'http://localhost' })
 
-    var button = document.getElementById('button')
-    var text = document.getElementById('text')
-    var list = document.getElementById('list')
-    var message = document.getElementById('message')
+      var button = document.getElementById('button')
+      var text = document.getElementById('text')
+      var list = document.getElementById('list')
+      var message = document.getElementById('message')
 
-    button.addEventListener('click', function (e) {
-      e.preventDefault()
-    })
-
-    var appendMessage = function appendMessage(msg) {
-      if (list) {
-        var li = document.createElement('li')
-        li.innerHTML = msg
-        list.appendChild(li)
-      }
-    }
-
-    channel.onConnect(function (error) {
-      if (error) {
-        console.error(error.message)
-        message.innerHTML = 'Sorry something went wrong :/'
-        appendMessage(error.message)
-        return
-      } else {
-        message.innerHTML = "You're connected :)"
-        console.log("You're connected!")
-        setTimeout(function () {
-          message.remove()
-        }, 2500)
-      }
-
-      channel.emit('chat message', "Hello everyone, I'm " + channel.id)
-
-      channel.onDisconnect(function () {
-        console.log('You got disconnected')
+      button.addEventListener('click', function(e) {
+        e.preventDefault()
       })
 
-      if (button)
-        button.addEventListener('click', function (e) {
-          if (text) {
-            var content = text.value
-            if (content && content.trim().length > 0) {
-              channel.emit('chat message', content.trim())
-              text.value = ''
-            }
-          }
+      var appendMessage = function appendMessage(msg) {
+        if (list) {
+          var li = document.createElement('li')
+          li.innerHTML = msg
+          list.appendChild(li)
+        }
+      }
+
+      channel.onConnect(function(error) {
+        if (error) {
+          console.error(error.message)
+          message.innerHTML = 'Sorry something went wrong :/'
+          appendMessage(error.message)
+          return
+        } else {
+          message.innerHTML = "You're connected :)"
+          console.log("You're connected!")
+          setTimeout(function() {
+            message.remove()
+          }, 2500)
+        }
+
+        channel.emit('chat message', "Hello everyone, I'm " + channel.id)
+
+        channel.onDisconnect(function() {
+          console.log('You got disconnected')
         })
 
-      channel.on('chat message', function (data) {
-        appendMessage(data)
-      })
-    })
-  </script>
-</body>
+        if (button)
+          button.addEventListener('click', function(e) {
+            if (text) {
+              var content = text.value
+              if (content && content.trim().length > 0) {
+                channel.emit('chat message', content.trim())
+                text.value = ''
+              }
+            }
+          })
 
+        channel.on('chat message', function(data) {
+          appendMessage(data)
+        })
+      })
+    </script>
+  </body>
 </html>
