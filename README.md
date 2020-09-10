@@ -20,4 +20,7 @@ $ npm install
 
 # Start the the app
 $ npm start
+
+# Done
+# Now open your browser on http://localhost:8080 or http://127.0.0.1:8080
 ```
