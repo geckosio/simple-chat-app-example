@@ -23,4 +23,8 @@ $ npm start
 
 # Done
 # Now open your browser on http://localhost:8080 or http://127.0.0.1:8080
+
+# Testing it on a server?
+# run "npm run production" instead of "npm start"
+$ npm run production
 ```
