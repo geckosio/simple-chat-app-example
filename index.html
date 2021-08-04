@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Chat App with geckos.io</title>
-    <script src="./js/geckos.io-client.1.6.1.min.js"></script>
+    <script src="./js/geckos.io-client.2.0.0.min.js"></script>
   </head>
 
   <body>
@@ -46,7 +46,7 @@
       var list = document.getElementById('list')
       var message = document.getElementById('message')
 
-      button.addEventListener('click', function(e) {
+      button.addEventListener('click', function (e) {
         e.preventDefault()
       })
 
@@ -58,7 +58,7 @@
         }
       }
 
-      channel.onConnect(function(error) {
+      channel.onConnect(function (error) {
         if (error) {
           console.error(error.message)
           message.innerHTML = 'Sorry something went wrong :/'
@@ -67,19 +67,19 @@
         } else {
           message.innerHTML = "You're connected :)"
           console.log("You're connected!")
-          setTimeout(function() {
+          setTimeout(function () {
             message.remove()
           }, 2500)
         }
 
         channel.emit('chat message', "Hello everyone, I'm " + channel.id)
 
-        channel.onDisconnect(function() {
+        channel.onDisconnect(function () {
           console.log('You got disconnected')
         })
 
         if (button)
-          button.addEventListener('click', function(e) {
+          button.addEventListener('click', function (e) {
             if (text) {
               var content = text.value
               if (content && content.trim().length > 0) {
@@ -89,7 +89,7 @@
             }
           })
 
-        channel.on('chat message', function(data) {
+        channel.on('chat message', function (data) {
           appendMessage(data)
         })
       })

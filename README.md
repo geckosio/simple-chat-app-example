@@ -2,7 +2,7 @@
 
 ## About
 
-This example uses [@geckos.io/server](https://www.npmjs.com/package/@geckos.io/server) (1.6.1) on the node server and a minified version of [@geckos.io/client](https://www.npmjs.com/package/@geckos.io/client) (1.6.1) in the index.html file. You will find all minified version of @geckos.io/client [here](https://github.com/geckosio/geckos.io/tree/master/bundles).
+This example uses [@geckos.io/server](https://www.npmjs.com/package/@geckos.io/server) (2.0.0) on the node server and a minified version of [@geckos.io/client](https://www.npmjs.com/package/@geckos.io/client) (2.0.0) in the index.html file. You will find all minified version of @geckos.io/client [here](https://github.com/geckosio/geckos.io/tree/master/bundles).
 
 ## How To Start
 
@@ -23,8 +23,4 @@ $ npm start
 
 # Done
 # Now open your browser on http://localhost:8080 or http://127.0.0.1:8080
-
-# Testing it on a server?
-# run "npm run production" instead of "npm start"
-$ npm run production
 ```
