@@ -25,5 +25,5 @@ $ npm start
 $ npm run serve
 
 # Done
-# Now open your browser on http://localhost:8080 or http://127.0.0.1:8080
+# Now open your browser on http://localhost:3000 or http://127.0.0.1:3000
 ```
