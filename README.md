@@ -18,7 +18,7 @@ $ cd simple-chat-app-example
 # Install dependencies
 $ npm install
 
-# Start the the app
+# Start the app
 $ npm start
 
 # Done
