@@ -18,11 +18,14 @@ $ cd simple-chat-app-example
 # Install dependencies
 $ npm install
 
-# Start the the app (development)
+# Start the app (development)
 $ npm start
 
-# Start the the app (production)
+# Start the app (production)
 $ npm run serve
+
+# Start the app (with pm2)
+$ pm2 start npm -- run serve
 
 # Done
 # Now open your browser on http://localhost:3000 or http://127.0.0.1:3000
