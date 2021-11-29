@@ -5,7 +5,8 @@
   "scripts": {
     "start": "npm-run-all --parallel dev:*",
     "dev:nodejs": "nodemon server.mjs",
-    "dev:browser": "live-server --port=8080"
+    "dev:browser": "live-server --port=8080",
+    "serve": "NODE_ENV=production node server.mjs"
   },
   "author": "Yannick Deubel (https://github.com/yandeu)",
   "license": "MIT",

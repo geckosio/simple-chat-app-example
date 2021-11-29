@@ -9,8 +9,8 @@ This example uses [@geckos.io/server](https://www.npmjs.com/package/@geckos.io/s
 To clone and run this example, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
-# Clone this repository
-$ git clone --depth 1 https://github.com/geckosio/simple-chat-app-example.git
+# Get this repository
+$ npx gitget geckosio/simple-chat-app-example#httpServer
 
 # Go into the repository
 $ cd simple-chat-app-example
@@ -18,8 +18,11 @@ $ cd simple-chat-app-example
 # Install dependencies
 $ npm install
 
-# Start the the app
+# Start the the app (development)
 $ npm start
+
+# Start the the app (production)
+$ npm run serve
 
 # Done
 # Now open your browser on http://localhost:8080 or http://127.0.0.1:8080
