@@ -22,7 +22,6 @@ const requestListener = async (req, res) => {
 const server = createServer(requestListener)
 
 const io = geckos({
-  ordered: true, // in a game, this should be set to false (default is false)
   iceServers: process.env.NODE_ENV === 'production' ? iceServers : [],
 })
 
