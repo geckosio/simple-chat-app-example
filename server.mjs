@@ -23,6 +23,7 @@ const server = createServer(requestListener)
 
 const io = geckos({
   iceServers: process.env.NODE_ENV === 'production' ? iceServers : [],
+  portRange: { min: 20000, max: 20100 },
 })
 
 io.addServer(server)
