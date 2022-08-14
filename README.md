@@ -2,7 +2,7 @@
 
 ## About
 
-This example uses [@geckos.io/server](https://www.npmjs.com/package/@geckos.io/server) (2.0.0) on the node server and a minified version of [@geckos.io/client](https://www.npmjs.com/package/@geckos.io/client) (2.0.0) in the index.html file. You will find all minified version of @geckos.io/client [here](https://github.com/geckosio/geckos.io/tree/master/bundles).
+This example uses [@geckos.io/server](https://www.npmjs.com/package/@geckos.io/server) (2.2.2) on the node server and a minified version of [@geckos.io/client](https://www.npmjs.com/package/@geckos.io/client) (2.2.2) in the index.html file. You will find all minified version of @geckos.io/client [here](https://github.com/geckosio/geckos.io/tree/master/bundles).
 
 ## How To Start
 
