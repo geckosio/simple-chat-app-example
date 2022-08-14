@@ -2,7 +2,7 @@
 
 ## About
 
-This example uses [@geckos.io/server](https://www.npmjs.com/package/@geckos.io/server) (2.2.2) on the node server and a minified version of [@geckos.io/client](https://www.npmjs.com/package/@geckos.io/client) (2.2.2) in the index.html file. You will find all minified version of @geckos.io/client [here](https://github.com/geckosio/geckos.io/tree/master/bundles).
+This example uses geckos.io v2.2.2.
 
 ## How To Start
 
@@ -10,7 +10,7 @@ To clone and run this example, you'll need [Git](https://git-scm.com) and [Node.
 
 ```bash
 # Clone this repository
-$ git clone --depth 1 https://github.com/geckosio/simple-chat-app-example.git
+$ npx gitget https://github.com/geckosio/simple-chat-app-example
 
 # Go into the repository
 $ cd simple-chat-app-example
