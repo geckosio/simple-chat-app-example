@@ -6,13 +6,14 @@
     "start": "npm-run-all --parallel dev:*",
     "dev:nodejs": "nodemon server.mjs",
     "dev:browser": "live-server --port=8080",
-    "dev:esbuild": "esbuild js/index.js --outfile=js/bundle.js --bundle --watch"
+    "dev:esbuild": "esbuild js/index.js --outfile=js/bundle.js --bundle --watch",
+    "build": "esbuild js/index.js --outfile=js/bundle.js --bundle"
   },
   "author": "Yannick Deubel (https://github.com/yandeu)",
   "license": "MIT",
   "dependencies": {
-    "@geckos.io/client": "^2.2.2",
-    "@geckos.io/server": "2.2.2"
+    "@geckos.io/client": "^2.3.0",
+    "@geckos.io/server": "^2.3.0"
   },
   "devDependencies": {
     "esbuild": "^0.15.3",
