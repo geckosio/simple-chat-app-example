@@ -1,8 +1,11 @@
 import geckos, { iceServers } from '@geckos.io/server'
 
 const io = geckos({
-  ordered: true, // in a game, this should be set to false (default is false)
   iceServers: process.env.NODE_ENV === 'production' ? iceServers : [],
+  portRange: {
+    min: 10000,
+    max: 10008,
+  },
 })
 
 // listen on port 3000 (default is 9208)

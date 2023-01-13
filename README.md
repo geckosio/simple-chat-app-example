@@ -25,6 +25,16 @@ $ npm start
 # Now open your browser on http://localhost:8080 or http://127.0.0.1:8080
 ```
 
+## Dockerize
+
+```
+# build
+docker build -t geckos-chat-app .
+
+# run
+docker run geckos-chat-app
+```
+
 ## HttpServer Branch
 
 Have a look at the [httpServer branch](https://github.com/geckosio/simple-chat-app-example/tree/httpServer) as well!
