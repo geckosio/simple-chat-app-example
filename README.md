@@ -35,6 +35,12 @@ docker build --progress=plain -t geckos-chat-app .
 docker run -p 3000:3000/tcp -p 10000-10007:10000-10007/udp geckos-chat-app
 ```
 
+### From Docker Hub
+
+```
+docker run -p 3000:3000/tcp -p 10000-10007:10000-10007/udp yandeu/geckos.io-simple-chat-app:latest
+```
+
 ## HttpServer Branch
 
 Have a look at the [httpServer branch](https://github.com/geckosio/simple-chat-app-example/tree/httpServer) as well!
