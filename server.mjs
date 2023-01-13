@@ -4,8 +4,9 @@ const io = geckos({
   iceServers: process.env.NODE_ENV === 'production' ? iceServers : [],
   portRange: {
     min: 10000,
-    max: 10008,
+    max: 10007,
   },
+  cors: { allowAuthorization: true },
 })
 
 // listen on port 3000 (default is 9208)

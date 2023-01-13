@@ -29,10 +29,10 @@ $ npm start
 
 ```
 # build
-docker build -t geckos-chat-app .
+docker build --progress=plain -t geckos-chat-app .
 
 # run
-docker run geckos-chat-app
+docker run -p 3000:3000/tcp -p 10000-10007:10000-10007/udp geckos-chat-app
 ```
 
 ## HttpServer Branch
