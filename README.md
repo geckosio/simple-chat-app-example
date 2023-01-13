@@ -25,6 +25,10 @@ $ npm start
 # Now open your browser on http://localhost:8080 or http://127.0.0.1:8080
 ```
 
+## Server
+
+Make sure you open ports 3000/tcp and 1025-65535/udp
+
 ## Dockerize
 
 ```
