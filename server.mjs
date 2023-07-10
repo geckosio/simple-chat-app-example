@@ -1,5 +1,10 @@
 import geckos, { iceServers } from '@geckos.io/server'
+import http from 'http'
+import express from 'express'
 
+const port = 3000
+const app = express()
+const server = http.createServer(app)
 const io = geckos({
   iceServers: process.env.NODE_ENV === 'production' ? iceServers : [],
   portRange: {
@@ -9,8 +14,9 @@ const io = geckos({
   cors: { allowAuthorization: true },
 })
 
-// listen on port 3000 (default is 9208)
-io.listen(3000)
+app.use("/", express.static('public'))
+
+io.addServer(server)
 
 io.onConnection((channel) => {
   channel.onDisconnect(() => {
@@ -22,4 +28,9 @@ io.onConnection((channel) => {
   channel.on('chat message', (data) => {
     channel.room.emit('chat message', data)
   })
+})
+
+
+server.listen(port, () => {
+  console.log(`Example app listening on http://localhost:${port}/`)
 })
