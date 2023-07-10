@@ -42,5 +42,5 @@ docker run -p 3000:3000/tcp -p 10000-10007:10000-10007/udp geckos-chat-app
 ### From Docker Hub
 
 ```
-docker run -p 3000:3000/tcp -p 10000-10007:10000-10007/udp yandeu/geckos.io-simple-chat-app:latest
+docker run --pull always -p 3000:3000/tcp -p 10000-10007:10000-10007/udp yandeu/geckos.io-simple-chat-app:latest
 ```

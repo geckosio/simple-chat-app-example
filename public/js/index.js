@@ -1,7 +1,7 @@
 import geckos from '@geckos.io/client'
 
 // pass the port and url of the server
-const channel = geckos({ port: 3000 })
+const channel = geckos({ port: location.port })
 
 const button = document.getElementById('button')
 const text = document.getElementById('text')
