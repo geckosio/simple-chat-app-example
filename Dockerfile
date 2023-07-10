@@ -17,7 +17,4 @@ WORKDIR /usr/src/app
 COPY --from=build /usr/src/app .
 COPY --from=build /usr/src/app/node_modules ./node_modules
 
-EXPOSE 3000/tcp
-EXPOSE 10000-10007/udp
-
 CMD node server.mjs

@@ -8,8 +8,8 @@ const server = http.createServer(app)
 const io = geckos({
   iceServers: process.env.NODE_ENV === 'production' ? iceServers : [],
   portRange: {
-    min: 10000,
-    max: 10007,
+    min: process.env.PORT_RANGE_MIN ? parseInt(process.env.PORT_RANGE_MIN) : 10000,
+    max: process.env.PORT_RANGE_MAX ? parseInt(process.env.PORT_RANGE_MAX) : 10007,
   },
   cors: { allowAuthorization: true },
 })
