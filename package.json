@@ -12,13 +12,13 @@
   "author": "Yannick Deubel (https://github.com/yandeu)",
   "license": "MIT",
   "dependencies": {
-    "@geckos.io/client": "^2.3.0",
-    "@geckos.io/server": "^2.3.0"
+    "@geckos.io/client": "^2.3.1",
+    "@geckos.io/server": "^2.3.1"
   },
   "devDependencies": {
-    "esbuild": "^0.15.3",
-    "five-server": "^0.1.4",
-    "nodemon": "^2.0.12",
+    "esbuild": "^0.18.11",
+    "five-server": "^0.3.1",
+    "nodemon": "^3.0.1",
     "npm-run-all": "^4.1.5"
   }
 }
