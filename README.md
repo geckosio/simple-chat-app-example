@@ -2,7 +2,7 @@
 
 ## About
 
-This example uses geckos.io ^2.3.1.
+This example uses geckos.io ^2.3.2-dev.0
 
 ## How To Start
 
