@@ -11,8 +11,8 @@
   "author": "Yannick Deubel (https://github.com/yandeu)",
   "license": "MIT",
   "dependencies": {
-    "@geckos.io/client": "^2.3.2-dev.0",
-    "@geckos.io/server": "^2.3.2-dev.0",
+    "@geckos.io/client": "^2.3.2",
+    "@geckos.io/server": "^2.3.2",
     "express": "^4.18.2"
   },
   "devDependencies": {
