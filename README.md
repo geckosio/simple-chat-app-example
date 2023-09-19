@@ -42,7 +42,7 @@ docker run -p 3000:3000/tcp -p 10000-10007:10000-10007/udp geckos-chat-app
 ### From Docker Hub
 
 ```
-docker run --pull always -p 3000:3000/tcp -p 10000-10007:10000-10007/udp yandeu/geckos.io-simple-chat-app:latest
+docker run -d --rm -p 3000:3000/tcp -p 10000-10007:10000-10007/udp yandeu/geckos.io-simple-chat-app:latest
 ```
 
 ## Multiple docker containers
@@ -50,6 +50,6 @@ docker run --pull always -p 3000:3000/tcp -p 10000-10007:10000-10007/udp yandeu/
 Run two docker containers with different ports.
 
 ```bash
-docker run --pull always -d -p 3000:3000/tcp -p 10000:10000/udp -e PORT_RANGE_MIN=10000 -e PORT_RANGE_MAX=10000 yandeu/geckos.io-simple-chat-app:latest
-docker run --pull always -d -p 3001:3000/tcp -p 10001:10001/udp -e PORT_RANGE_MIN=10001 -e PORT_RANGE_MAX=10001 yandeu/geckos.io-simple-chat-app:latest
+docker run --pull always -d --rm -p 3000:3000/tcp -p 10000:10000/udp -e PORT_RANGE_MIN=10000 -e PORT_RANGE_MAX=10000 yandeu/geckos.io-simple-chat-app:latest
+docker run --pull always -d --rm -p 3001:3000/tcp -p 10001:10001/udp -e PORT_RANGE_MIN=10001 -e PORT_RANGE_MAX=10001 yandeu/geckos.io-simple-chat-app:latest
 ```
